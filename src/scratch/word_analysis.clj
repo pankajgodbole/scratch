@@ -11,11 +11,11 @@
 
 (->> pfo-book-words
      (cs/lower-case)
-     (frequencies ))
+     (frequencies))
 
 (->> pfo-book-words
       (map cs/lower-case)
-      (frequencies ))
+      (frequencies))
 
 (->> pfo-book-words
      (map cs/lower-case)
@@ -62,7 +62,7 @@
   ""
   (-> (slurp "/home/p/Documents/most-common-english-words-100.txt")
     (cs/split #" ")
-    set ))
+    set))
 
 (count common-words)
 
@@ -129,9 +129,9 @@
      ;;(take 20)
      (group-by count)
      (sort-by first)
-     (reverse)
+     (reverse))
      ;;(count)
-     )
+
 
 ;;
 ;; Count the number of words that are 17-letters long (10)
@@ -144,8 +144,8 @@
      (second)
      (second)
      ;;(first)
-     (count)
-     )
+     (count))
+
 
 
 ;;
@@ -175,8 +175,8 @@
      (filter palindrome?)
      (sort-by count)
      (reverse)
-     (first)
+     (first)))
      ;;(count)
-     ))
+
 
 (longest-palidrome pfo-distinct-book-words)
